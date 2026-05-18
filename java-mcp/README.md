@@ -44,17 +44,18 @@ mvn clean package
 ```
 
 ### Client Configuration (e.g., Claude Desktop)
-Add the following to your MCP client configuration (like `claude_desktop_config.json`) to register the server. Ensure you set the `WORKSPACE_ROOT` to the directory you want the AI to have access to.
+Add the following to your MCP client configuration (like `claude_desktop_config.json`) to register the server. Ensure you set the `app.workspace-root` system property to the directory you want the AI to have access to.
 
 ```json
 {
   "mcpServers": {
-    "java-assistant": {
-      "command": "java",
-      "args": ["-jar", "/path/to/workspace-mcp/java-mcp/target/java-mcp-1.0.0.jar"],
-      "env": {
-        "WORKSPACE_ROOT": "/path/to/your/workspace"
-      }
+    "java-mcp-server": {
+      "command": "java or path to java binary",
+      "args": [
+        "-Dapp.workspace-root=d:\\Codes\\workspace-mcp\\java-mcp",
+        "-jar",
+        "d:\\Codes\\workspace-mcp\\java-mcp\\target\\java-mcp.jar"
+      ]
     }
   }
 }
