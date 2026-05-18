@@ -1,0 +1,4 @@
+# src/main/resources/application-test.yaml
+app:
+  workspace-root: d:\\Codes\\workspace-mcp\\java-mcp
+  java-parser-level: JAVA_21

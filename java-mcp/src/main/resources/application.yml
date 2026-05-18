@@ -1,0 +1,21 @@
+spring:
+  main:
+    banner-mode: off
+    web-application-type: none
+  ai:
+    mcp:
+      server:
+        name: java-assistant
+        version: 1.0.0
+        stdio: true
+
+# Redirect all logging to file to keep stdout clean for MCP stdio protocol
+logging:
+  pattern:
+    console:
+  file:
+    name: java-mcp.log
+
+app:
+  workspace-root: ${WORKSPACE_ROOT:/default/path/to/workspace}
+  java-parser-level: ${JAVA_PARSER_LEVEL:JAVA_21}
