@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "js-mcp-server": {
+      "command": "node",
+      "args": [
+        "/absolute/path/to/js-mcp/dist/index.js"
+      ],
+      "env": {
+        "APP_WORKSPACE_ROOT": "/absolute/path/to/your/project"
+      }
+    }
+  }
+}
